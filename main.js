@@ -1,5 +1,5 @@
 const summaryContainer = document.querySelector(".summary__stats__wrapper")
-fetch('/data.json')
+fetch('https://raw.githubusercontent.com/adamrichardturner/results-summary-component/main/data.json')
     .then(response => response.json())
     .then(data => {
         const dataMap = data.map((feature) => {
