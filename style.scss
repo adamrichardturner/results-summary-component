@@ -1,0 +1,215 @@
+// PRIMARY
+$light-red: hsla(0, 100%, 67%, .10);
+$orangey-yellow: hsla(39, 100%, 56%, .10);
+$green-teal: hsla(166, 100%, 37%, .10);
+$cobalt-blue: hsla(234, 85%, 45%, .10);
+
+// GRADIENT - CIRCLE
+$violent-blue: hsla(256, 72%, 46%, 1);
+$persian-blue: hsla(241, 72%, 46%, 0);
+
+// NEUTRAL
+$white: hsla(0, 0%, 100%, 0.75);
+$pale-blue: hsl(221, 100%, 96%);
+$light-lavender: hsl(241, 100%, 89%);
+$dark-grey-blue: hsl(224, 30%, 27%);
+
+// BREAKPOINTS
+$desktop: 1440px;
+$mobile: 767px;
+$card-width-desktop: 18rem;
+$card-width-mobile: 60vw;
+// RESETS
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+// MIXINS
+@mixin flex-row {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+@mixin flex-row-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+// BODY
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+// ICONS
+img {
+    margin-right: 20px;
+}
+
+// SUMMARY RESULT COMPONENT
+.summary {
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    @media only screen and (max-width: $mobile) {
+        flex-direction: column;
+        border-radius: 0;
+        width: $card-width-mobile;
+    }
+    &__result {
+        width: $card-width-desktop;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(46,43,233);
+        background: linear-gradient(0deg, rgba(46,43,233,1) 50%, rgba(120,87,255,0.8814119397759104) 100%);
+        color: $white;
+        border-radius: 50px;
+        @media only screen and (max-width: $mobile) {
+            border-radius: 0 0 50px 50px;
+        }
+        &-title {
+            margin-bottom: 2rem;
+            h3 {
+                font-size: 1.5rem;
+            }
+        }
+        &-circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background: rgb(78,33,202);
+            background: linear-gradient(187deg, rgba(78,33,202,1) 50%, rgba(36,33,202,1) 100%);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            h3 {
+                font-size: 4.25rem;
+                margin: 0;
+                color: white;
+            }
+            p {
+                margin-top: -12px;
+            }
+        }
+        &-detail {
+            margin-top: 2rem;
+            h3 {
+                font-size: 2rem;
+                color: white;
+            }
+        }
+    }
+    &__stats {
+        width: $card-width-desktop;
+        padding: 2rem 2.5rem;
+        @media only screen and (max-width: $mobile) {
+            width: $card-width-mobile;
+        }
+        &-title {
+            margin-bottom: 3rem;
+            h3 {
+                color: $dark-grey-blue;
+            }
+        }
+        &-button {
+            background: $dark-grey-blue;
+            border-radius: 50px;
+            padding: 1rem;
+            color: $white;
+            text-align: center;
+            margin-top: 2.75rem;
+        }
+        &__wrapper {
+            font-size: 1rem;
+            &__reaction {
+                padding: 1rem;
+                @include flex-row;
+                background: $light-red;
+                &-title {
+                    @include flex-row-title;
+                    h3 {
+                        color: hsla(0, 100%, 67%, .75);
+                    }
+                }
+                &-detail {
+                    span {
+                        color: slategray;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            &__memory {
+                padding: 1rem;
+                @include flex-row;
+                background: $orangey-yellow;
+                &-title {
+                    @include flex-row-title;
+                    h3 {
+                        color: hsla(39, 100%, 56%, .75);
+                    }
+                }
+                &-detail {
+                    span {
+                        color: slategray;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            &__verbal {
+                padding: 1rem;
+                @include flex-row;
+                background: $green-teal;
+                &-title {
+                    @include flex-row-title;
+                    h3 {
+                        color: hsla(166, 100%, 37%, .75);
+                    }
+                }
+                &-detail {
+                    span {
+                        color: slategray;
+                        margin-left: 5px;
+                    }
+                }
+            }
+            &__visual {
+                padding: 1rem;
+                @include flex-row;
+                background: $cobalt-blue;
+                &-title {
+                    @include flex-row-title;
+                    h3 {
+                        color: hsla(234, 85%, 45%, .75);
+                    }
+                }
+                &-detail {
+                    span {
+                        color: slategray;
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
