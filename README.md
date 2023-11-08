@@ -1,4 +1,4 @@
-# Frontend Mentor - Results summary component solution
+# Results summary component
 
 This is my solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV).
 
@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Demo
 
-- Live Site URL: [https://adamrichardturner.github.io/results-summary-component](https://adamrichardturner.github.io/results-summary-component)
+- Live Site URL: [https://summary.adamrichardturner.dev/](https://summary.adamrichardturner.dev/)
 
 ### Built with
 
